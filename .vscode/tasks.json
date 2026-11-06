@@ -1,0 +1,36 @@
+{
+  // 在 VS Code 按 Command + Shift + B 就會執行「啟動 mini-RAG」。
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "啟動 mini-RAG",
+      "dependsOn": ["後端 (FastAPI)", "前端 (Vue)"],
+      "dependsOrder": "parallel",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "後端 (FastAPI)",
+      "type": "shell",
+      "command": "./start.sh backend",
+      "isBackground": true,
+      "presentation": { "group": "mini-rag", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "前端 (Vue)",
+      "type": "shell",
+      "command": "./start.sh frontend",
+      "isBackground": true,
+      "presentation": { "group": "mini-rag", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "執行測試",
+      "type": "shell",
+      "command": "cd backend && (command -v uv >/dev/null && uv || ~/.local/bin/uv) run pytest",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  // 「執行與偵錯」面板（Command + Shift + D）裡選「偵錯後端」可以設中斷點。
+  // 需要先執行過一次 ./start.sh（或 cd backend && uv sync）建立 .venv。
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "偵錯後端 (FastAPI)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["app.main:app", "--port", "8000"],
+      "cwd": "${workspaceFolder}/backend",
+      "python": "${workspaceFolder}/backend/.venv/bin/python",
+      "justMyCode": true
+    }
+  ]
+}

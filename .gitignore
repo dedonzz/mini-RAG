@@ -1,0 +1,16 @@
+# secrets
+.env
+
+# personal data: uploads + index
+data/
+
+# python
+.venv/
+__pycache__/
+.pytest_cache/
+
+# node
+node_modules/
+frontend/dist/
+
+.DS_Store

@@ -1,0 +1,73 @@
+{
+  "app": {
+    "subtitle": "Your documents, searched locally",
+    "menu": "Documents & settings",
+    "close": "Close"
+  },
+  "status": {
+    "llm": "LLM",
+    "embedder": "Embedding",
+    "notConfigured": "not configured",
+    "stats": "{documents} documents · {chunks} chunks"
+  },
+  "docs": {
+    "title": "Documents",
+    "drop": "Drop files here, or",
+    "browse": "browse",
+    "hint": "Supports .txt, .md, .pdf — up to {mb} MB each",
+    "uploading": "Processing… (reading, chunking, embedding)",
+    "empty": "No documents yet. Upload one to get started.",
+    "chunks": "{n} chunks",
+    "delete": "Delete",
+    "confirmDelete": "Delete “{name}”?",
+    "reindex": "Rebuild index",
+    "reindexing": "Rebuilding…",
+    "reindexDone": "Index rebuilt: {n} chunks",
+    "uploadOk": "{name}: imported {n} chunks",
+    "uploadFail": "{name}: {error}",
+    "settingsChanged": "Chunk settings changed. Rebuild the index to apply them to existing documents.",
+    "needsReindex": "The embedding model changed. Rebuild the index before asking questions."
+  },
+  "settings": {
+    "title": "Settings",
+    "chunkSize": "Chunk size (chars)",
+    "chunkOverlap": "Overlap (chars)",
+    "topK": "Results (top-k)",
+    "save": "Save",
+    "saved": "Saved",
+    "chunkNote": "Chunk size and overlap are used when indexing; top-k is used when asking and applies immediately."
+  },
+  "chat": {
+    "placeholder": "Ask about your documents… (Enter to send, Shift+Enter for a new line)",
+    "send": "Send",
+    "thinking": "Searching…",
+    "emptyTitle": "Ask a question",
+    "emptyBody": "Upload documents, then type a question below. The most relevant chunks are retrieved and assembled into the prompt for the LLM.",
+    "notConfiguredTitle": "LLM not configured",
+    "notConfiguredBody": "TempMainLLM is a placeholder. Below are the retrieved chunks and the prompt that will be sent once an LLM is connected.",
+    "sources": "Sources ({n})",
+    "noSources": "No relevant chunks found.",
+    "chunk": "chunk {n}",
+    "score": "similarity",
+    "prompt": "Show the prompt sent to the LLM",
+    "clear": "Clear chat"
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "errors": {
+    "network_error": "Can't reach the backend. Is FastAPI running?",
+    "unsupported_file_type": "Unsupported file type",
+    "file_too_large": "File too large",
+    "empty_text": "No text found (maybe a scanned PDF)",
+    "load_failed": "Couldn't read the file",
+    "invalid_filename": "Invalid file name",
+    "document_not_found": "Document not found",
+    "needs_reindex": "Rebuild the index first",
+    "chunk_size_out_of_range": "Chunk size must be between 50 and 4000",
+    "chunk_overlap_out_of_range": "Overlap must be at least 0 and smaller than the chunk size",
+    "top_k_out_of_range": "top-k must be between 1 and 20",
+    "invalid_input": "Invalid input",
+    "unknown": "Something went wrong"
+  }
+}

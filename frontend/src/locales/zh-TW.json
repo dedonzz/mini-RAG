@@ -1,0 +1,73 @@
+{
+  "app": {
+    "subtitle": "你的文件，本機檢索",
+    "menu": "文件與設定",
+    "close": "關閉"
+  },
+  "status": {
+    "llm": "LLM",
+    "embedder": "Embedding",
+    "notConfigured": "尚未設定",
+    "stats": "{documents} 份文件 · {chunks} 個段落"
+  },
+  "docs": {
+    "title": "文件",
+    "drop": "拖曳檔案到這裡，或",
+    "browse": "選擇檔案",
+    "hint": "支援 .txt、.md、.pdf，單檔上限 {mb} MB",
+    "uploading": "處理中…（讀檔、切段、計算 embedding）",
+    "empty": "還沒有文件，先上傳一份吧。",
+    "chunks": "{n} 段",
+    "delete": "刪除",
+    "confirmDelete": "確定要刪除「{name}」嗎？",
+    "reindex": "重建索引",
+    "reindexing": "重建中…",
+    "reindexDone": "索引已重建，共 {n} 個段落",
+    "uploadOk": "{name}：已匯入 {n} 段",
+    "uploadFail": "{name}：{error}",
+    "settingsChanged": "切段參數已變更，按「重建索引」套用到現有文件。",
+    "needsReindex": "Embedding 模型已更換，必須重建索引才能提問。"
+  },
+  "settings": {
+    "title": "設定",
+    "chunkSize": "段落大小（字）",
+    "chunkOverlap": "重疊（字）",
+    "topK": "檢索數量 top-k",
+    "save": "儲存",
+    "saved": "已儲存",
+    "chunkNote": "段落大小與重疊在建立索引時使用；top-k 在提問時使用，立即生效。"
+  },
+  "chat": {
+    "placeholder": "問一個關於你文件的問題…（Enter 送出，Shift+Enter 換行）",
+    "send": "送出",
+    "thinking": "檢索中…",
+    "emptyTitle": "開始提問",
+    "emptyBody": "上傳文件後，在下方輸入問題。系統會找出最相關的段落，並組成要送給 LLM 的 prompt。",
+    "notConfiguredTitle": "尚未設定 LLM",
+    "notConfiguredBody": "目前使用 TempMainLLM 佔位。以下是檢索到的段落，以及接上 LLM 後會送出的 prompt。",
+    "sources": "引用來源（{n}）",
+    "noSources": "沒有找到相關段落。",
+    "chunk": "第 {n} 段",
+    "score": "相似度",
+    "prompt": "查看送給 LLM 的 prompt",
+    "clear": "清除對話"
+  },
+  "lang": {
+    "label": "語言"
+  },
+  "errors": {
+    "network_error": "無法連線到後端，請確認 FastAPI 已啟動。",
+    "unsupported_file_type": "不支援的檔案格式",
+    "file_too_large": "檔案太大",
+    "empty_text": "讀不到任何文字（可能是掃描版 PDF）",
+    "load_failed": "讀取檔案失敗",
+    "invalid_filename": "檔名無效",
+    "document_not_found": "找不到這份文件",
+    "needs_reindex": "需要先重建索引",
+    "chunk_size_out_of_range": "段落大小需介於 50 到 4000",
+    "chunk_overlap_out_of_range": "重疊需大於等於 0，且小於段落大小",
+    "top_k_out_of_range": "top-k 需介於 1 到 20",
+    "invalid_input": "輸入格式不正確",
+    "unknown": "發生未知錯誤"
+  }
+}
